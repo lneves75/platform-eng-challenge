@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+
+  database:
+    image: postgres
+    environment:
+      - PGPASSWORD=postgres
+      - PGUSER=postgres
+      - POSTGRES_HOST_AUTH_METHOD=trust
+      - POSTGRES_DB=dbname_development
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+  myapp:
+    build:
+      context: .
+    command: bin/rails server --port 3000 --binding 0.0.0.0
+    volumes:
+      - ./blog:/myapp
+    ports:
+      - "3000:3000"
+    environment:
+    - POSTGRES_PASSWORD=postgres
+    - POSTGRES_USER=postgres
+    depends_on:
+      - database
+
