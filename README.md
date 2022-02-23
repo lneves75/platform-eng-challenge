@@ -33,7 +33,8 @@ There are some improvements and bug fixes that can be made in:
 - [ ] Once all services are started, ensure that database is created and has no pending migrations (can be done by using `bin/rake db:create db:migrate`)
 - [ ] Automate all repetitive tasks such as building the image, starting/stopping the services, run database migrations (**bonus**)
 - [ ] Test that everything works by accessing the [blog app](http://localhost:3000/), creating an article, restarting all services, loading the article and deleting it afterwards (**bonus**)
-- [ ] Adjust `.github/workflows/build.yml` so that after the image is build it's uploaded to AWS ECR (use github actions secrets `AWS_SECRET_ACCESS_KEY` and `AWS_ACCESS_KEY_ID`)
-- [ ] Add another job, that depends on the build job, which would call `kubectl` to set the image for the k8s deployment named `blog` (the kubectl config file exists locally with the name `k8s.config`)
-- [ ] Add a step on this job that would monitor the deployment rollout (**bonus**)
+- [ ] Adjust `.github/workflows/build.yml` so that after the image is build it's uploaded to AWS ECR (use `000000000000.dkr.ecr.us-east-1.amazonaws.com` as registry and github actions secrets `AWS_SECRET_ACCESS_KEY` and `AWS_ACCESS_KEY_ID`)
+- [ ] Add another job, that depends on the build job, which would call `kubectl` to set the image for the k8s deployment named `blog` (assume the kubectl config file exists locally with the name `k8s.config`)
+- [ ] Add a step on this job that would monitor the deployment progress (**bonus**)
 
+For the last three tasks no execution of the github action is needed, we just want to see how you would implement it.
