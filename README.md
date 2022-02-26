@@ -5,15 +5,6 @@
 
 This code repository contains the blog rails app based on the [Getting Started with Rails guide](https://guides.rubyonrails.org/getting_started.html#creating-the-blog-application).
 
-## Requirements
-
-The rails app was setup using:
-- ruby 2.7.3p183 (2021-04-05 revision 6847ee089d) [x86_64-linux]
-- Rails 7.0.1
-- Node v14.18.3
-- Yarn 1.22.17
-- Postgresql as a database engine. Tested with version 13.2
-
 ## Problems
 
 There are some improvements and bug fixes that can be made in:
