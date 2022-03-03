@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: web
-  name: web
+    app: blog
+  name: blog
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: web
+      app: blog
 
   template:
     metadata:
       labels:
-        app: web
+        app: blog
 
     spec:
       securityContext: {}
       containers:
-      - image: gcr.io/google-samples/hello-app:1.0
+      - image: 000000000000.dkr.ecr.us-east-1.amazonaws.com/blog:TAG
         imagePullPolicy: IfNotPresent
-        name: hello-app
+        name: blog
