@@ -20,7 +20,7 @@ There are some improvements and bug fixes that can be made in:
 ### Containers
 
 - [ ] Looking at the Dockerfile, how can we avoid busting the cache for the dependency update everytime we update the source code ?
-- [ ] Ideally the image size for running in production should be less than 1Gb (**bonus**)
+- [ ] Ideally the image size for running in production should be less than 1GB (**bonus**)
 - [ ] Use build arguments so we can use the same ruby version as defined in file `blog/.ruby-version` as opposed of an hardcoded image version
 - [ ] Persist the database's data for future, so that when the service is stopped the data is not lost
 - [ ] Check if the environment variables defined in the blog service are valid and match expected names/values in the rails database configuration `blog/config/database.yml`
@@ -28,7 +28,7 @@ There are some improvements and bug fixes that can be made in:
 - [ ] Automate all repetitive tasks such as building the image, starting/stopping the services, run database migrations (**bonus**)
 - [ ] Test that everything works by accessing the [blog app](http://localhost:3000/), creating an article, restarting all services, loading the article and deleting it afterwards (**bonus**)
 
-### CI/CD
+### Continuous Deployment
 
 Using `.github/workflows/build.yml`:
 

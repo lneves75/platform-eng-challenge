@@ -11,7 +11,7 @@ WORKDIR /myapp
 # Copy source code to the application directory
 COPY blog/ /myapp
 
-# Install all ruby dependencies
+# Install all the application dependencies
 RUN bundle install
 
 # Run the rails server
